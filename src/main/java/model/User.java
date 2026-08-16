@@ -19,6 +19,9 @@ import java.util.List;
 public class User implements UserDetails {
     @Id
     private Long id;
+    private String name;
+    private String LastName;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of();
