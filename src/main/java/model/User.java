@@ -1,6 +1,10 @@
 package model;
 
+import enums.Role;
+import enums.ServiceType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import lombok.*;
 import org.jspecify.annotations.Nullable;
@@ -19,8 +23,17 @@ import java.util.List;
 public class User implements UserDetails {
     @Id
     private Long id;
-    private String name;
-    private String LastName;
+    private String nom;
+    private String prenom;
+    private String email;
+    private String password;
+
+
+    @Enumerated(EnumType.STRING)
+    Role role;
+
+    @Enumerated(EnumType.STRING)
+    ServiceType field;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
