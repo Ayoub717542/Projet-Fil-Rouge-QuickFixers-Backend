@@ -1,4 +1,4 @@
-package DTO;
+package com.example.QuickFixersBackend.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

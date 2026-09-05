@@ -1,4 +1,4 @@
-package enums;
+package com.example.QuickFixersBackend.enums;
 
 public enum ServiceType {
     ELECTROMENAGER,
